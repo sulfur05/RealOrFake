@@ -1,7 +1,11 @@
+# Ignore all training images
+data/train/fake/
+data/train/real/
+
+# Or ignore all images
 *.jpg
 *.png
 *.jpeg
 
-data/train/fake
-data/train/real
-
+# Or ignore entire data folder
+data/

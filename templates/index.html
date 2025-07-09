@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Fake Media Detector</title>
-</head>
+<head><title>Fake Media Detector</title></head>
 <body>
-    <h1>Upload an Image</h1>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" required>
-        <button type="submit">Check</button>
-    </form>
-    {% if prediction %}
-    <h2>Prediction: {{ prediction }}</h2>
-    {% endif %}
+  <h1>Upload an Image</h1>
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Check</button>
+  </form>
+  {% if prediction %}
+  <h2>Results:</h2>
+  <ul>
+    <li>✅ Real: {{ prediction['Real'] * 100 }}%</li>
+    <li>❌ Fake: {{ prediction['Fake'] * 100 }}%</li>
+  </ul>
+  {% endif %}
 </body>
 </html>
