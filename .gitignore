@@ -2,4 +2,6 @@
 *.png
 *.jpeg
 
-data/train
+data/train/fake
+data/train/real
+
